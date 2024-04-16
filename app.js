@@ -5,10 +5,8 @@ ScrollReveal({
     duration: 1000
 })
 ScrollReveal().reveal('.hero');
-ScrollReveal().reveal('.card-1', {delay: 20});
-ScrollReveal().reveal('.card-2', {delay: 25});
-ScrollReveal().reveal('.card-3', {delay: 30});
-ScrollReveal().reveal('.card-4', {delay: 35});
+ScrollReveal().reveal('.hero');
+ScrollReveal().reveal('.card', {delay: 20});
 
 let birthdayLine = document.querySelector('#happy_birthday')
 
