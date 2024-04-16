@@ -79,6 +79,16 @@ body {
     }
 
     /* Cards */
+    .main-container .card-wrapper .first-row {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .main-container .card-wrapper .second-row {
+        display: flex;
+        flex-direction: column;
+    }
+
     .main-container .card-wrapper {
         margin: 1.5rem;
         display: flex;
@@ -236,7 +246,6 @@ body {
         font-size: 2rem;
     }
 
-
     /* 567PX */
     @media (min-width:567px){
         /* Header */
@@ -259,12 +268,17 @@ body {
     
         /* Cards */
         .main-container .card-wrapper .first-row {
-            margin-right: 5vw;
+            flex-direction: row;
+            gap: 2em;
+        }
+    
+        .main-container .card-wrapper .second-row {
+            flex-direction: row;
+            gap: 2em;
         }
 
         .main-container .card-wrapper {
-            flex-direction: row;
-            justify-content: space-between;
+            flex-direction: column;
         }
 
         .main-container .card-container .card img {
