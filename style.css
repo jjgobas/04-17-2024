@@ -104,6 +104,7 @@ body {
         color: white;
         position: absolute;
         opacity: 0;
+        cursor: pointer;
     }
 
     .main-container .card-container .card img {
