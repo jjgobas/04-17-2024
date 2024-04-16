@@ -1,0 +1,434 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@font-face {
+    font-family: PPEditiorialNew;
+    src: url(fonts/PPEditorialNew-Ultralight.otf)
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: rgba(32, 40, 46, 0.1);
+}
+
+@media (min-width:320px){
+    /* Header */
+    header {
+        display: flex;
+        height: 60px;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    header h1 {
+        font-size: 1.2em;
+        font-weight: bold;
+    }
+
+    /* Hero */
+    .hero {
+        width: 100%;
+        height: 250px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .hero div {
+        display: inline-flex;
+        justify-content: center;
+        width: 100%;
+        line-height: 0.8em;
+        font-weight: 400;
+        font-size: 16vw;
+        user-select: none;
+    }
+
+    .hero .first-line {
+        width: 80%;
+        position: relative;
+        padding-left: 1.8em;
+    }
+    
+    .hero .first-line::before {
+        position: absolute;
+        content:'APRIL 17, 2024';
+        font-size: 0.2em;
+        left: 0;
+        top: 1.3em;
+    }
+
+    .hero .second-line {
+        padding-right: 0.5em;
+    }
+
+    .hero .third-line {
+        padding-left: 0.5em;
+    }
+
+    .hero .third-line:hover {
+        color: rgb(197, 48, 48);
+        transition: all 1s ease-in-out;
+    }
+
+    /* Cards */
+    .main-container .card-wrapper {
+        margin: 1.5rem;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .main-container .card {
+        margin-bottom: 8vw;
+        border-radius: 1.5rem;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .main-container .card span {
+        font-size: 1rem;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        top: 0;
+        left: 0;
+        color: white;
+        position: absolute;
+        opacity: 0;
+    }
+
+    .main-container .card-container .card img {
+        cursor: pointer;
+        width: 100%;
+        object-fit: cover;
+        border-radius: 1.5rem;
+    }
+
+    /* PREVIEW */
+    .main-container .card-container .view-tab {
+        z-index: 2;
+        background-color: rgba(17, 17, 17, 0.932);
+        position: fixed;
+        top:0;
+        right:0;
+        bottom:0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        visibility: hidden;
+    }
+
+    .card-container .preview-card {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        margin: 12%;
+    }
+
+    .card-container .preview-card a {
+        z-index: 5;
+        position: absolute;
+        right: 1rem;
+        top: 0.5rem;
+        cursor: pointer;
+    }
+
+    .card-container .preview-card .image {
+        z-index: 2;
+        background-color: #1D212B;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    .card-container .preview-card img {
+        border-radius: 1rem 1rem 0 0 ;
+        z-index: 2;
+        position: relative;
+        width: 100%;
+    }
+
+    .card-container .preview-card .info {
+        background: white;
+        display: flex;
+        width: 100%;
+        padding: 2rem;
+        border-radius: 0 0 1rem 1rem;
+        font-size: 1em;
+    }
+    
+    /* Marquee */
+    .top-marquee {
+        background-color: rgb(223, 89, 28);
+        width: 100%;
+        overflow: hidden;
+        white-space: nowrap;
+        margin-bottom: 2em;
+    }
+
+    .top-marquee:hover div {
+        animation-play-state: paused;
+    }
+
+    .top-marquee div {
+        padding: 1em 0;
+        display: inline-block;
+        animation: marquee-animation-to-the-left 35s linear infinite;
+    }
+
+    .top-marquee p {
+        font-size: 1.5em;
+        font-weight: 500;
+    }
+
+    /* Footer */
+    .footer {
+        width: 100%;
+        height: 200px;
+        background-color: #302F2F;
+    }
+
+    .footer .marquee-wrapper .marquee {
+        color: rgb(184, 184, 184);
+        width: 100%;
+        overflow: hidden;
+        white-space: nowrap;
+        margin-bottom: 2em;
+    }
+
+    .footer .marquee-wrapper .marquee:hover div {
+        animation-play-state: paused;
+    }
+
+    .footer .marquee-wrapper .marquee div {
+        padding: 1em 0;
+        display: inline-block;
+        animation: marquee-animation-to-the-right 35s linear infinite;
+    }
+
+    .footer .marquee-wrapper .marquee p {
+        font-size: 1.5em;
+        font-weight: 500;
+    }
+
+    .footer .text-container {
+        margin: 0.5em;
+        display: flex;
+        flex-direction: column;
+        align-items:start;
+        justify-content: flex-start;
+        font-weight: bold;
+        line-height: 1em;
+        color: rgb(184, 184, 184);
+        font-size: 2rem;
+    }
+
+
+    /* 567PX */
+    @media (min-width:567px){
+        /* Header */
+        header {
+            font-size: 1.2rem;
+        }
+    
+        .hero {
+            height: 500px;
+        }
+    
+        .hero div {
+            font-size: 16vw;
+        }
+    
+        .hero .first-line::before {
+            font-size: 0.15em;
+            top: 2em;
+        }
+    
+        /* Cards */
+        .main-container .card-wrapper .first-row {
+            margin-right: 5vw;
+        }
+
+        .main-container .card-wrapper {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        .main-container .card-container .card img {
+            height: auto;
+            width: 100%;
+        }
+
+        .main-container .card span {
+            font-size: 1.2rem;
+        }
+
+        /* PREVIEW */
+        .card-container .preview-card {
+            max-width: 400px;
+            margin: 25%;
+        }
+
+        .card-container .preview-card .info {
+            font-size: 1.2em;
+        }
+    
+        /* Footer */
+        .footer {
+            height: 150px;
+        }
+
+        .footer .text-container {
+            flex-direction: row;
+        }
+
+        .footer .text-container .copyright {
+            margin-right: 1rem;
+        }
+    
+    }
+
+    @media (min-width:1024px){
+        /* Header */
+        header {
+            align-items: center;
+            height: 90px;
+        }
+    
+        header h1 {
+            width: 90%;
+            display: flex;
+            justify-content: flex-start
+        }
+    
+        /* Hero */
+        .hero {
+            height: 600px;
+        }
+
+        .hero .first-line::before {
+            content:'';
+        }
+    
+        .hero .third-line {
+            width: 90%;
+            position: relative;
+        }
+    
+        .hero .third-line::before {
+            position: absolute;
+            content:'APRIL 17, 2024';
+            font-size: 0.08em;
+            font-weight: 500;
+            top: 4em;
+            left: 0;
+        }
+    
+        /* Cards */
+        .main-container .card-wrapper {
+            margin: 5em 5em 0 5em;
+        }
+
+        .main-container .card span {
+            font-size: 1.5rem;
+        }
+
+        /* PREVIEW */   
+        .card-container .preview-card {
+            max-width: none;
+            flex-direction: row;
+            margin: 10%;
+        }
+    
+        .card-container .preview-card a {
+            right: 1rem;
+        }
+    
+        .card-container .preview-card .image {
+            border-radius: 1rem 0 0 1rem;
+            width: 100%;
+        }
+    
+        .card-container .preview-card img {
+            border-radius: 1rem 0 0 1rem;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    
+        .card-container .preview-card .info {
+            border-radius: 0 1rem 1rem 0;
+            font-size: 1.8em;
+            align-items: center;
+            text-align: center;
+        }
+    
+        /* Footer */
+        .footer {
+            height: 150px;
+        }
+    }
+
+    @media (min-width: 1326px) {
+        /* Hero */
+        .hero {
+            height: 800px;
+        }
+
+        /* Cards */
+        .main-container .card span {
+            font-size: 2rem;
+        }
+    }
+}
+
+/* HOVER EFFECT */
+.card:hover #click-image {
+    transform: scale(1.1);
+    transition: all .5s ease-in-out;
+    filter: blur(0.2rem) brightness(50%);
+}
+
+.card:hover span {
+    opacity: 1;
+    transition: all .5s ease-in-out;
+}
+
+/* SHOW PREVIEW */
+.main-container .view-tab.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* HEADER HOVER */
+header h1:hover {
+    color: rgb(216, 15, 15);
+    transition: all 0.3s ease-in-out;
+}
+
+@keyframes marquee-animation-to-the-left {
+    to {
+        transform: translateX(-100%)
+    }
+}
+
+@keyframes marquee-animation-to-the-right {
+    from {
+        transform: translateX(-100%)
+    }
+    to {
+        transform: translateX(0%)
+    }
+}
